@@ -1,10 +1,10 @@
-// Carrossel 1
+// carrossel 1
 const carrossel1 = document.getElementById('carrossel1').querySelector('.container');
 const prevButton1 = document.getElementById('prev1');
 const nextButton1 = document.getElementById('next1');
-let currentIndex1 = 0; // Índice da imagem atual para o carrossel 1
+let currentIndex1 = 0; // indice da imagem atual para o carrossel 1
 
-// Função para mover o carrossel 1 para a imagem correspondente
+// funcao carrossel 1
 function moveToImage1(index) {
     const width = carrossel1.clientWidth;
     carrossel1.style.transform = `translateX(-${index * width}px)`;
@@ -26,13 +26,13 @@ nextButton1.addEventListener('click', () => {
     moveToImage1(currentIndex1);
 });
 
-// Carrossel 2
+// carrossel 2
 const carrossel2 = document.getElementById('carrossel2').querySelector('.container');
 const prevButton2 = document.getElementById('prev2');
 const nextButton2 = document.getElementById('next2');
-let currentIndex2 = 0; // Índice da imagem atual para o carrossel 2
+let currentIndex2 = 0; // indice imagem
 
-// Função para mover o carrossel 2 para a imagem correspondente
+// funcao carrossel 2
 function moveToImage2(index) {
     const width = carrossel2.clientWidth;
     carrossel2.style.transform = `translateX(-${index * width}px)`;
@@ -54,14 +54,14 @@ nextButton2.addEventListener('click', () => {
     moveToImage2(currentIndex2);
 });
 
-// Partes de scroll
+// scroll
 
 document.querySelector('a[href="#"]').addEventListener('click', function(event) {
-    event.preventDefault(); // Impede o comportamento padrão do link
+    event.preventDefault();
 
     window.scrollTo({
-        top: 0, // Define o topo máximo da página
-        behavior: 'smooth' // Rola suavemente até o topo
+        top: 0, // topo da pagina
+        behavior: 'smooth' // scrolla suavemente ate o topo
     });
 });
 
@@ -69,10 +69,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
-        const targetId = this.getAttribute('href').substring(1); // Pega o id do alvo
+        const targetId = this.getAttribute('href').substring(1); // pega o id do alvo
         const targetElement = document.getElementById(targetId);
 
-        // Distância do topo do alvo, subtraindo a altura do cabeçalho fixo (5px a menos)
+        // dist do topo do alvo, subtraindo a altura do cabecalho
         const offsetTop = targetElement.offsetTop - 60;
 
         window.scrollTo({
@@ -82,7 +82,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Animação de scroll dos projetos
+// animacao de scroll dos projetos aparecendo
 
 document.addEventListener('DOMContentLoaded', function () {
     const projetos = document.querySelectorAll('.projeto');
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 entry.target.classList.add('visivel');
             }
         });
-    }, { threshold: 0.5 }); // Quando 50% do elemento estiver visível
+    }, { threshold: 0.5 }); // quando 50% do elemento estiver visivel
     
     projetos.forEach(projeto => {
         observer.observe(projeto);
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
             alert(erro);
         } else {
             alert("Formulário enviado com sucesso!");
-            form.submit(); // Submete o formulário se tudo estiver correto
+            form.submit(); // submete o formulario se tudo estiver correto
         }
     });
 
