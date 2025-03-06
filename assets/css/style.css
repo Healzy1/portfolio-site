@@ -14,7 +14,7 @@ html {
 /* espaçamento para não sobrepor o menu */
 body {
     background-color: #f0f0f0;
-    margin-top: 70px; /* para o conteúdo não ser sobreposto pela barra fixa */
+    margin-top: 70px; /* para o conteudo nao ser sobreposto pela barra fixa */
     color: #333;
     font-size: 18px;
 }
@@ -409,7 +409,7 @@ footer a:visited {
     color: inherit;
 }
 
-/* responsividade geral */
+/* Responsividade Geral */
 
 @media (max-width: 768px){
 
