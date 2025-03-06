@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* deixar a rolagem suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Adiciona espaçamento para o conteúdo principal (para não sobrepor o menu) */
+body {
+    background-color: #f0f0f0;
+    margin-top: 70px; /* ajuste para o conteúdo não ser sobreposto pela barra fixa */
+    color: #333;
+    font-size: 18px;
+}
+
+/* Header */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #6A5ACD;
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* testar ela mais forte */
+}
+
+/* Menu */
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+/* Itens do menu */
+nav ul li {
+    display: inline-block;
+    margin-right: 16px;
+}
+
+/* Links */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+}
+
+nav ul li a:hover {
+    background-color: #7c6af0;
+    transform: scale(1.1);
+}
+
+nav ul li a:hover, button:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* imagem do pc */
+
+#inicio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    gap: 50px; /* Espaçamento entre o texto e a imagem */
+    max-width: 1200px; /* Para evitar que fique muito esticado em telas grandes */
+    margin: auto;
+    padding: 40px 20px;
+}
+
+#inicio h1, #inicio p {
+    flex: 1.2;
+}
+
+/* Seção de introdução */
+#inicio h1 {
+    font-size: 36px; /* Maior destaque */
+    font-weight: 700;
+}
+
+#inicio p {
+    font-size: 20px; /* Texto levemente maior para destaque */
+    font-weight: 300;
+}
+
+#inicio img {
+    flex: 1;
+    max-width: 45%; /* Ajusta para ocupar metade da seção */
+}
+
+#sobre_mim {
+    background-color: #f0f0f0; /* Cor de fundo clara */
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 1200px; /* Tamanho máximo do container */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    display: flex;
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: center; /* Alinha o título "Sobre Mim" ao centro horizontalmente */
+}
+
+#sobre_mim h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #5A31F4;
+    text-align: center; /* Centraliza o título horizontalmente */
+    margin: 0;
+    padding-bottom: 20px; /* Espaço abaixo do título */
+}
+
+#sobre_mim div {
+    display: flex; /* Usando flexbox para o conteúdo */
+    flex-direction: column; /* Empilha o conteúdo em coluna */
+    gap: 10px; /* Espaçamento entre os parágrafos */
+    max-width: 900px; /* Limita a largura do conteúdo */
+    align-self: flex-start; /* Alinha o conteúdo à esquerda */
+}
+
+#sobre_mim p {
+    font-size: 20px;
+    line-height: 1.6; /* Deixa o texto mais espaçado */
+    color: #333;
+    margin-bottom: 10px; /* Espaçamento entre os parágrafos */
+}
+
+#sobre_mim p strong {
+    color: #6A5ACD; /* Destaque para as partes importantes */
+}
+
+
+/* Sections */
+
+section{
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h1, h2{
+    color: #5A31F4;
+}
+
+/* Botoes */
+
+button{
+    margin-top: 15px;
+    width: 100%;
+    background-color: #7c6af0;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #5A31F4; /* Mudando a cor do botão no hover */
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Mais sombra */
+    transform: scale(1.01); /* Efeito de "pulse" no botão */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+}
+
+.imagens {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Projetos */
+
+.projeto h3 {
+    font-size: 20px; /* Destaque para títulos de projetos */
+    font-weight: 700;
+}
+
+.projeto p {
+    font-size: 18px;
+}
+
+.projeto {
+    background-color: #FFFFFF;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra mais suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 1200px;
+}
+
+.projeto:hover {
+    transform: translateY(-5px); /* Leve efeito de elevação */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animações de Scroll */
+.projeto {
+    opacity: 0; /* Inicia invisível */
+    transform: translateY(50px); /* Começa abaixo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.projeto.visivel {
+    opacity: 1; /* Aparece ao rolar */
+    transform: translateY(0); /* Move-se para sua posição original */
+}
+
+/* Adicionar consulta de mídia para telas pequenas */
+@media (max-width: 768px) {
+    .projeto {
+        padding: 15px; /* Menos padding para caber na tela */
+        margin: 10px auto; /* Menos margem */
+    }
+
+    .projeto h3 {
+        font-size: 18px; /* Tamanho de fonte menor */
+    }
+
+    .projeto p {
+        font-size: 16px; /* Tamanho de fonte menor */
+    }
+}
+
+/* carrosel */
+
+/* Estilo dos botões */
+.carrossel-controles button {
+    background-color: #7c6af0;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carrossel-controles button:hover {
+    background-color: #5A31F4;
+}
+
+.carrossel {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;;
+    margin: 0;
+    padding: 0;
+    min-height: 50vh;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Adicionar consulta de mídia para telas pequenas */
+@media (max-width: 768px) {
+    .carrossel {
+        width: 100%; /* O carrossel ocupa 100% da largura da tela */
+        min-height: 40vh; /* Ajusta a altura para telas menores */
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .projeto .carrossel .container img {
+        width: 100%; /* Faz com que a imagem ocupe 100% da largura da tela */
+        object-fit: cover;
+    }
+}
+
+/* Container dos botões */
+.carrossel-controles {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espaço entre os botões */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Estilo dos botões */
+.carrossel-controles button {
+    background-color: #7c6af0;
+    color: #fff;
+    border: none;
+    width: 80%;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carrossel-controles button:hover {
+    background-color: #6b45f5;
+}
+
+
+.carrossel img {
+    width: 100%; /* Cada imagem ocupa a largura do container */
+    flex-shrink: 0;
+}
+
+.container {
+    display: flex;
+    transition: 0.5s ease-in-out;
+    width: max-content;
+}
+
+.projeto .carrossel .container img {
+    margin: 0;
+    max-width: 100%; /* Faz com que a imagem ocupe até 100% da largura da div */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Ajusta a imagem para preencher o espaço disponível sem distorcer */
+}
+
+/* Contato */
+
+#contato {
+    background-color: #6A5ACD;
+    color: #FFFFFF;
+    padding: 50px 20px;
+}
+
+#contato h2 {
+    color: #FFD700;
+    font-size: 32px; /* Aumentando o tamanho da fonte */
+    margin-bottom: 30px; /* Mais espaço abaixo do título */
+    text-align: center; /* Centraliza o título */
+}
+
+.redes_sociais {
+    margin-bottom: 40px; /* Espaço entre as redes sociais e o formulário */
+    text-align: center;
+}
+
+.redes_sociais h3 {
+    font-size: 20px;
+    margin-bottom: 10px; /* Espaço abaixo do título "Redes Sociais" */
+}
+
+.redes_sociais img {
+    width: 40px;
+    height: auto;
+    display: inline-block;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.redes_sociais img:hover {
+    transform: scale(1.1);
+}
+
+form {
+    color: #333;
+    text-align: start;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Pequena sombra */
+}
+
+label {
+    display: block;
+    font-size: 18px; /* Aumentando o tamanho da fonte dos labels */
+    margin-top: 20px; /* Aumentando o espaço acima dos labels */
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px; /* Aumentando o padding dos campos */
+    margin-top: 8px; /* Aumentando o espaço acima dos campos */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px; /* Ajustando o tamanho da fonte dos campos */
+}
+
+/* Footer */
+
+footer {
+    background-color: #333;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 15px;
+}
+
+footer a {
+    color: #000; /* Cor inicial do link */
+    text-decoration: none; /* Remover sublinhado se não quiser */
+    display: inline-block;
+    padding: 5px 10px; /* Padding para dar mais espaço ao redor do link */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+    border-radius: 5px;
+}
+
+footer a:hover{
+    background-color: #7c6af0;
+    transform: scale(1.1);
+}
+
+footer a:visited {
+    color: inherit; /* Mantém a mesma cor do link após ser visitado */
+}
+
+/* Responsividade */
+
+@media (max-width: 768px){
+
+    header {
+        padding: 4px;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: auto;
+    }
+
+    #inicio {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #inicio img {
+        max-width: 70%;
+    }
+}
